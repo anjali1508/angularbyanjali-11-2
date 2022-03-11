@@ -1,0 +1,66 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h3>Log in</h3>
+        <form
+          class="loginForm"
+          name="f"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="firstName">UserName</label>
+            <input
+              type="text"
+              class="form-control"
+              name="u1"
+              [(ngModel)]="data1.u1"
+              #u1="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && u1.invalid }"
+              required
+            />
+
+            <span class="help-block" *ngIf="!u1.valid && u1.touched"
+              >Please enter a Username!</span
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="p1"
+              [(ngModel)]="data1.p1"
+              #p1="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+              required
+            />
+
+            <span class="help-block" *ngIf="!p1.valid && p1.touched"
+              >Please enter a password!</span
+            >
+          </div>
+
+          <div class="form-group">
+            <button
+              class="btn btn-primary mt-3"
+              [disabled]="f.invalid"
+              (click)="login()"
+            >
+              Login
+            </button>
+          </div>
+          <div
+            class="border-top card-body text-center mt-2"
+            routerLink="/register"
+          >
+            Don't Have an account? <a href="">Sign Up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

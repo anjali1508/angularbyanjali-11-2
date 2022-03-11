@@ -1,0 +1,21 @@
+.loginForm {
+  background: #f9f9f9;
+  padding: 30px;
+  box-shadow: 3px 4px 11px 3px #ccc;
+}
+
+.help-block {
+  padding-bottom: 10px;
+  color: red;
+}
+.form-control {
+  margin: 10px 3px 2px 1px;
+}
+
+.invalid-feedback {
+  padding: 10px 3px 10px 1px;
+}
+
+.form-group {
+  padding: 10px 3px 2px 1px;
+}

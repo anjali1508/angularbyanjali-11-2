@@ -10,13 +10,11 @@ export class LoginService {
   constructor(private rr: Router, private auth: AuthService) {}
 
   login(uname: string, pass: string) {
-    // alert(frm.user);
-    // this.data1 = JSON.parse(localStorage.getItem("user1"));
+
 
     if (uname === 'anjali' && pass === '123456') {
-      alert('hii...' + uname);
-      // localStorage.setItem('isLogin', 'true');
-      // this.auth.sendToken(uname);
+
+
       this.rr.navigate(['/product']);
       return true;
     } else {
@@ -29,16 +27,13 @@ export class LoginService {
         ) {
           alert('hii...' + uname);
           localStorage.setItem('curruser', JSON.stringify(this.data1[i]));
-          //  localStorage.setItem('isLogin', 'true');
+          
           this.auth.sendToken(uname);
           this.rr.navigate(['/product']);
           return true;
         }
       }
-      //  else {
-      //  alert('username and password not matched');
-      //  return true;
-      // }
+  
     }
   }
 }

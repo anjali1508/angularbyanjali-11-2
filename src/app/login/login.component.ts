@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     debugger;
     if (this.form.valid) {
       debugger;
-      alert('invalid');
+      alert('Invalid user. Please create an account!');
     } else {
       alert('valid');
     }
